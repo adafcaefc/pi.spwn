@@ -1,0 +1,69 @@
+let digits = 2;
+
+total = ?i;
+iterator = ?i;
+temp1 = ?i;
+temp2 = ?i;
+extract obj_props;
+
+$.add(obj {
+    OBJ_ID: 1615,
+    X: 300,
+    Y: 300,
+    ITEM: total,
+    GROUPS: 999g
+});
+
+$.add(obj {
+    OBJ_ID: 1615,
+    X: 150,
+    Y: 300,
+    ITEM: iterator,
+    GROUPS: 999g
+});
+
+$.add(obj {
+    OBJ_ID: 1615,
+    X: 150,
+    Y: 270,
+    ITEM: temp1,
+    GROUPS: 999g
+});
+
+
+$.add(obj {
+    OBJ_ID: 1615,
+    X: 150,
+    Y: 240,
+    ITEM: temp2,
+    GROUPS: 999g
+});
+
+digits = 10 ^ digits;
+
+total_counter = counter(total);
+i = counter(iterator);
+t1 = counter(temp1);
+t2 = counter(temp2);
+
+total_counter = 4;
+total_counter *= digits;
+i = 3;
+
+
+while_loop(() => i < 99999, () {
+    t2 = i;
+    t1 = 4;
+    t1 *= digits;
+    t1 /= t2;
+    total_counter -= t1;
+    i += 2;
+    t2 = t2;
+    t1 = 4;
+    t1 *= digits;
+    t1 /= t2;
+    total_counter += t1;
+    i += 2;
+})
+
+
