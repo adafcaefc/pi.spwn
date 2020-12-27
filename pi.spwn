@@ -4,6 +4,8 @@ total = ?i;
 iterator = ?i;
 temp1 = ?i;
 temp2 = ?i;
+
+
 extract obj_props;
 
 $.add(obj {
@@ -30,7 +32,6 @@ $.add(obj {
     GROUPS: 999g
 });
 
-
 $.add(obj {
     OBJ_ID: 1615,
     X: 150,
@@ -38,6 +39,7 @@ $.add(obj {
     ITEM: temp2,
     GROUPS: 999g
 });
+
 
 digits = 10 ^ digits;
 
@@ -52,18 +54,19 @@ i = 3;
 
 
 while_loop(() => i < 99999, () {
+
     t2 = i;
     t1 = 4;
     t1 *= digits;
     t1 /= t2;
     total_counter -= t1;
     i += 2;
+    
     t2 = t2;
     t1 = 4;
     t1 *= digits;
     t1 /= t2;
     total_counter += t1;
     i += 2;
-})
-
-
+    
+});
