@@ -1,3 +1,5 @@
+extract obj_props;
+
 let digits = 2;
 
 total = ?i;
@@ -5,8 +7,6 @@ iterator = ?i;
 temp1 = ?i;
 temp2 = ?i;
 
-
-extract obj_props;
 
 $.add(obj {
     OBJ_ID: 1615,
@@ -41,32 +41,26 @@ $.add(obj {
 });
 
 
-digits = 10 ^ digits;
+digits = 4 * (10 ^ digits);
 
 total_counter = counter(total);
 i = counter(iterator);
 t1 = counter(temp1);
 t2 = counter(temp2);
 
-total_counter = 4;
-total_counter *= digits;
-i = 3;
+total_counter = digits;
+i = 1;
 
+count = () {
+    i += 2;
+    t1 = digits;
+    t2 = i;
+    t1 /= t2;
+}
 
 while_loop(() => i < 99999, () {
-
-    t2 = i;
-    t1 = 4;
-    t1 *= digits;
-    t1 /= t2;
+    count();
     total_counter -= t1;
-    i += 2;
-    
-    t2 = t2;
-    t1 = 4;
-    t1 *= digits;
-    t1 /= t2;
+    count();
     total_counter += t1;
-    i += 2;
-    
 });
