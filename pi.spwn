@@ -7,7 +7,6 @@ iterator = ?i;
 temp1 = ?i;
 temp2 = ?i;
 
-
 $.add(obj {
     OBJ_ID: 1615,
     X: 300,
@@ -39,7 +38,6 @@ $.add(obj {
     ITEM: temp2,
     GROUPS: 999g
 });
-
 
 digits = 4 * (10 ^ digits);
 
