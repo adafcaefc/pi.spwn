@@ -1,6 +1,7 @@
 # pi.spwn
 
 A simple program that dynamically calculate pi on Geometry Dash using the SPWN language developed by Spu7nix.
+Huge thanks to https://github.com/Spu7Nix/
 
 ## Usage
 
