@@ -1,14 +1,4 @@
 let digits = 4;
-make_item_display = (item, x, y) {
-    extract obj_props
-    $.add(obj {
-        OBJ_ID: 1615,
-        X: x,
-        Y: y,
-        ITEM: item,
-        GROUPS: 999g
-    });
-}
 
 digits = 4 * (10 ^ digits);
 
@@ -17,15 +7,15 @@ i = counter(1);
 t1 = counter();
 t2 = counter();
 
-make_item_display(total_counter.item, 300, 300)
-make_item_display(i.item, 150, 300)
-make_item_display(t1.item, 150, 270)
-make_item_display(t2.item, 150, 240)
+total_counter.display(300, 300)
+i.display(150, 300)
+t1.display(150, 270)
+t2.display(150, 240)
 
 add_sub = counter(1)
-make_item_display(add_sub.item, 300, 210)
+add_sub.display(300, 210)
 
-count = {
+count = !{
     i += 2;
     t2.reset(speed = 12)
     t1 += digits
